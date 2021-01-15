@@ -1,17 +1,3 @@
-// fetch('https://jsonplaceholder.typicode.com/posts', {
-//     method: 'POST',
-//     body: JSON.stringify({
-//         title:'Upadated New user',
-//         name:'Raja',
-//         UserId:3,
-//     }),
-//     headers: {
-//         'Content-type': 'application/json; charset=UTF-8',
-//       },
-//     })
-//       .then((response) => response.json())
-//       .then((json) => console.log(json));
-
 
 
 document.getElementById('updateUserButton').addEventListener('click', fetchUserData);
@@ -20,26 +6,37 @@ function fetchUserData(){
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(users => {
-            let output = '<h2>List Of Posts</h2>'
+            let output = '<h2>List Of Users</h2>'
             output += '<ol>';
             users.forEach(function(users) {
                 output += `
 
-                    <div class="row" id="row-item">
-                    <div class="col-sm-6">
-                    <div class="card">
-                    <div class="card-body">
-                    <p class="card-text">
-                     ${users.name} 
-                    <br>
-                    ${users.email}
-                    <br>
-                    ${users.address}
-                    </p>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+                <div class="card text-black bg-secondary mb-3">
+                <div class="col">
+                <div class="card" style="width:29em;" >
+                <div class="card-body">
+                <h5 class="card-title">Details</h5>
+      
+                <p class="card-text">
+               Name:- ${users.name}
+               <br> 
+               Email:- ${users.email}
+               <br>
+               Address:- ${users.address.street}
+               <br>
+               Suite:- ${users.address.suite}
+               <br>
+               City:- ${users.address.city}
+               <br>
+               Zipcode:- ${users.address.zipcode}
+               </p>
+
+               </div>
+    </div>
+  </div>
+  </div>
+      
+                   
                     `
         
             });

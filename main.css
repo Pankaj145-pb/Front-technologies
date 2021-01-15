@@ -1,3 +1,23 @@
-.row-item{
+.button{
+    text-align: center;
+}
+
+#start{
+    text-align: center;
+}
+
+ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    ;
+    color:#28027A ;
+;
     
+
+}
+h2{
+    text-align: center;
+    color: #BD093F;
 }
