@@ -9,7 +9,31 @@
         <body>
           <div>
               <h1 id="start">Getting Started</h1>
-              <li class="btn btn-success" id='UserButton'>Post</li>
+              <div id="request">
+
+                <form id="addPostForm">
+                    <div>
+                        <input type="text" id="name" placeholder="name">
+                    </div>
+                    <div>
+                        <input id="email" placeholder="email"></input>
+                    </div>
+                    <div>
+                        <input type="address" id="address" placeholder="Address">
+                    </div>
+                    <div>
+                        <input type="address" id="suite" placeholder="Suite">
+                    </div>
+                    <div>
+                        <input type="city" id="city" placeholder="city">
+                    </div>
+                    <div>
+                        <input type="text" id="zip" placeholder="Zip-Code">
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+                </div>
+              </div>
           <hr>
           <div id="response"></div>
           <li class="btn btn-success" id='updateUserButton' style="margin-left: 600px;">User Details</li>

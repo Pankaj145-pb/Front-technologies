@@ -1,16 +1,40 @@
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  body: JSON.stringify({
+    id: 1,
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+
+
+
+
+//splice method
+
+
+
+
+
 // if else 
 
-function pos(a){
-    let result;
-    if(a>0){
-        result = 'positive';
-    }
-    else{
-        result = 'Not Positive';
-    }
-    return result;
-}
-console.log(pos(4));
+// function pos(a){
+//     let result;
+//     if(a>0){
+//         result = 'positive';
+//     }
+//     else{
+//         result = 'Not Positive';
+//     }
+//     return result;
+// }
+// console.log(pos(4));
 
 
 // function bind()
